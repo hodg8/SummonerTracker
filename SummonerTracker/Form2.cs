@@ -28,7 +28,7 @@ namespace SummonerTracker
         {
             try
             {
-                if (form1 != null)
+                if (form1 == null)
                 {
                     form1 = new Form1();
                     form1.Show();
