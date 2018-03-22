@@ -38,6 +38,6 @@ namespace SummonerTracker
                 form2.Show();
                 Hide();
             }
-        }
+        }        
     }
 }

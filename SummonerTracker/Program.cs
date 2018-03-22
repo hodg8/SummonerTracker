@@ -16,11 +16,11 @@ namespace SummonerTracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (Properties.Settings.Default.MyNotesPath != null)
-            {
-                Application.Run(new Form2());
-            }
-            else Application.Run(new Form3());
+            //if (Properties.Settings.Default.MyNotesPath != null)
+            //{
+            //    Application.Run(new Form2());
+            //}
+            Application.Run(new Form3());
         }
     }
 }

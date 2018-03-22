@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define SummonerTracker_TargetDir=$(var.SummonerTracker.TargetDir)?>
+	<Product Id="7d8a1086-9d2e-4997-ba20-fe5fdc66000f" Name="SummTracker" Language="1033" Version="1.0.0.0" Manufacturer="hodg" UpgradeCode="e72f5203-5767-40b5-b900-1d7ba3b015b6">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+
+    <Icon Id="MyShortcutIcon" SourceFile="$(var.ProjectDir)Flash.ico" />
+    <Property Id="ARPPRODUCTION" Value="MyShortcutIcon" />
+
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    <UIRef Id="WixUI_InstallDir" />
+
+		<Feature Id="ProductFeature" Title="SummTracker" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationDesktopShortcut" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="!(bind.property.ProductName)" />
+			</Directory>
+
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="MfgStartMenuFolder" Name="!(bind.property.ProductName)" />
+      </Directory>
+
+      <Directory Id="DesktopFolder" Name="Desktop" />
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">					
+			<Component Id="SummonerTracker.exe" Guid="0d47f7a6-9599-499d-9ca5-bae4fbd06903">
+			  <File Id="SummonerTracker.exe" Name="SummonerTracker.exe" Source="$(var.SummonerTracker_TargetDir)SummonerTracker.exe" />
+			</Component>
+			<Component Id="SummonerTracker.exe.config" Guid="d4b488c5-9580-4c4b-a92b-11f49208ffba">
+			  <File Id="SummonerTracker.exe.config" Name="SummonerTracker.exe.config" Source="$(var.SummonerTracker_TargetDir)SummonerTracker.exe.config" />
+			</Component>
+			<Component Id="Ookii.Dialogs.dll" Guid="ff2309ad-2f99-4863-a7b8-f2ce895080aa">
+			  <File Id="Ookii.Dialogs.dll" Name="Ookii.Dialogs.dll" Source="$(var.SummonerTracker_TargetDir)Ookii.Dialogs.dll" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="MfgStartMenuFolder" >
+      <Component Id="ApplicationShortcut" Guid="996b5692-abf6-45a8-8c32-22d459660306" >
+        <Shortcut Id="ApplicationStartMenuShortcut"
+                  Name="!(bind.property.ProductName)"
+                  Description="Summoner Spell Tracker"
+                  Directory="MfgStartMenuFolder"
+                  Target="[INSTALLFOLDER]SummonerTracker.exe"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon="MyShortcutIcon" />
+        <RemoveFolder Id="RemoveMfgStartMenuFolder"
+                      Directory="MfgStartMenuFolder"
+                      On="uninstall" />
+        <RegistryValue Root="HKCU"
+                       Key="Software\Microsoft\SummTracker\ProgramMenuShortcut"
+                       Name="installed"
+                       Type="integer"
+                       Value="1"
+                       KeyPath="yes" />
+      </Component>
+    </DirectoryRef>    
+  </Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="DesktopFolder" >
+      <Component Id="ApplicationDesktopShortcut" Guid="2bf65eee-4e69-42b4-82f2-6661013451d2" >
+        <Shortcut Id="MyDesktopShortcut"
+                  Name="!(bind.property.ProductName)"
+                  Description="Summoner Spell Tracker"
+                  Target="[INSTALLFOLDER]SummonerTracker.exe"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon="MyShortcutIcon" />
+        <RegistryValue Root="HKCU"
+                     Key="Software\Microsoft\SummTracker\DesktopShortcut"
+                     Name="installed"
+                     Type="integer"
+                     Value="1"
+                     KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

@@ -28,8 +28,11 @@ namespace SummonerTracker
         {
             try
             {
-                form1 = new Form1();
-                form1.Show();
+                if (form1 != null)
+                {
+                    form1 = new Form1();
+                    form1.Show();
+                }                
             }
             catch
             {
@@ -58,13 +61,13 @@ namespace SummonerTracker
         }        
 
         private void Form2_Closing (object sender, FormClosingEventArgs e)
-        {            
+        {
             List<string> folderList = new DirectoryInfo(form3.Folder).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
             foreach (string s in folderList)
             {
                 File.WriteAllText(s, "");
             }
             Application.Exit();
-        }
+        }        
     }
 }
