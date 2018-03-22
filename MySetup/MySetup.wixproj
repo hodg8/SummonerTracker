@@ -32,7 +32,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Flash.ico" />
+    <Content Include="flash_s8F_icon.ico" />
     <Content Include="MySetup.wax" />
   </ItemGroup>
   <ItemGroup>
