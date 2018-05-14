@@ -16,7 +16,7 @@ namespace SummonerTracker
     public partial class startStopform : Form
     {
         inGameform inGameform;
-        folderSelectform folderSelectform = new folderSelectform();
+        folderSelectform folderSelectform;
 
         public startStopform()
         {
@@ -48,7 +48,7 @@ namespace SummonerTracker
                 if (inGameform != null)
                 {
                     inGameform.Close();
-                    List<string> folderList = new DirectoryInfo(Properties.Settings.Default.MyNotesPath).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
+                    List<string> folderList = new DirectoryInfo(folderSelectform.Folder).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
                     foreach (string s in folderList)
                     {
                         File.WriteAllText(s, "");
@@ -62,7 +62,7 @@ namespace SummonerTracker
 
         private void startStopform_Closing (object sender, FormClosingEventArgs e)
         {
-            List<string> folderList = new DirectoryInfo(Properties.Settings.Default.MyNotesPath).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
+            List<string> folderList = new DirectoryInfo(folderSelectform.Folder).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
             foreach (string s in folderList)
             {
                 File.WriteAllText(s, "");

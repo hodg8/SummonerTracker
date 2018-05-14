@@ -11,7 +11,9 @@ namespace SummonerTracker
     class FileSearcher
     {
         long lastPosition;
-                        
+
+        folderSelectform folderSelectform;
+
         public delegate void AdcFlashEventHandler(object source, EventArgs args);
         public event AdcFlashEventHandler AdcFlashed;
         protected virtual void OnAdcFlashed()
@@ -266,7 +268,7 @@ namespace SummonerTracker
         {
             FileSystemWatcher fileWatcher = new FileSystemWatcher();
             fileWatcher.EnableRaisingEvents = false;
-            fileWatcher.Path = Properties.Settings.Default.MyNotesPath;
+            fileWatcher.Path = folderSelectform.Folder;
             fileWatcher.IncludeSubdirectories = true;
             fileWatcher.NotifyFilter = NotifyFilters.LastWrite;
             fileWatcher.Filter = "MyNotes.txt";
