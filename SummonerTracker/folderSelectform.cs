@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ookii.Dialogs;
@@ -20,7 +21,7 @@ namespace SummonerTracker
 
         public folderSelectform()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -32,7 +33,7 @@ namespace SummonerTracker
                 Properties.Settings.Default.Save();
             }
 
-            if (Properties.Settings.Default.MyNotesPath != null)
+            if (Properties.Settings.Default.MyNotesPath != null && Properties.Settings.Default.MyNotesPath.Length > 0)
             {
                 startStopform = new startStopform();
                 startStopform.Show();
