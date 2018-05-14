@@ -20,7 +20,7 @@ namespace SummonerTracker
             //{
             //    Application.Run(new Form2());
             //}
-            Application.Run(new Form3());
+            Application.Run(new folderSelectform());
         }
     }
 }

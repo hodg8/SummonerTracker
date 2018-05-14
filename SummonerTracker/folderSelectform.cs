@@ -11,14 +11,14 @@ using Ookii.Dialogs;
 
 namespace SummonerTracker
 {
-    public partial class Form3 : Form
+    public partial class folderSelectform : Form
     {
         private static string folder = Properties.Settings.Default.MyNotesPath;
         public string Folder { get => folder; set => folder = value; }
 
-        Form2 form2;
+        startStopform startStopform;
 
-        public Form3()
+        public folderSelectform()
         {
             InitializeComponent();
         }
@@ -34,8 +34,8 @@ namespace SummonerTracker
 
             if (Properties.Settings.Default.MyNotesPath != null)
             {
-                form2 = new Form2();
-                form2.Show();
+                startStopform = new startStopform();
+                startStopform.Show();
                 Hide();
             }
         }        

@@ -13,25 +13,25 @@ using System.IO;
 
 namespace SummonerTracker
 {
-    public partial class Form2 : Form
+    public partial class startStopform : Form
     {
-        Form1 form1;
-        Form3 form3 = new Form3();
+        inGameform inGameform;
+        folderSelectform folderSelectform = new folderSelectform();
 
-        public Form2()
+        public startStopform()
         {
             InitializeComponent();
-            this.FormClosing += new FormClosingEventHandler(Form2_Closing);
+            this.FormClosing += new FormClosingEventHandler(startStopform_Closing);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if (form1 == null)
+                if (inGameform == null)
                 {
-                    form1 = new Form1();
-                    form1.Show();
+                    inGameform = new inGameform();
+                    inGameform.Show();
                 }                
             }
             catch
@@ -45,10 +45,10 @@ namespace SummonerTracker
         {
             try
             {
-                if (form1 != null)
+                if (inGameform != null)
                 {
-                    form1.Close();
-                    List<string> folderList = new DirectoryInfo(form3.Folder).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
+                    inGameform.Close();
+                    List<string> folderList = new DirectoryInfo(folderSelectform.Folder).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
                     foreach (string s in folderList)
                     {
                         File.WriteAllText(s, "");
@@ -60,9 +60,9 @@ namespace SummonerTracker
             }                                           
         }        
 
-        private void Form2_Closing (object sender, FormClosingEventArgs e)
+        private void startStopform_Closing (object sender, FormClosingEventArgs e)
         {
-            List<string> folderList = new DirectoryInfo(form3.Folder).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
+            List<string> folderList = new DirectoryInfo(folderSelectform.Folder).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
             foreach (string s in folderList)
             {
                 File.WriteAllText(s, "");

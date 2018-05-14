@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 namespace SummonerTracker
 {
-    public partial class Form1 : Form
+    public partial class inGameform : Form
     {
         [DllImport("user32.dll", EntryPoint = "GetWindowLong")]
         static extern int GetWindowLong(IntPtr hWnd, int iIndex);
@@ -341,7 +341,7 @@ namespace SummonerTracker
             }
         }
 
-        public Form1()
+        public inGameform()
         {
             this.TransparencyKey = Color.Black;            
             InitializeComponent();
