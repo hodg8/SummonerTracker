@@ -15,9 +15,7 @@ namespace SummonerTracker
     public partial class folderSelectform : Form
     {
         private static string folder = Properties.Settings.Default.MyNotesPath;
-        public string Folder { get => folder; set => folder = value; }
-
-        startStopform startStopform;
+        public static string Folder { get => folder; set => folder = value; }       
 
         public folderSelectform()
         {
@@ -35,7 +33,7 @@ namespace SummonerTracker
 
             if (Properties.Settings.Default.MyNotesPath != null && Properties.Settings.Default.MyNotesPath.Length > 0)
             {
-                startStopform = new startStopform();
+                startStopform startStopform = new startStopform();
                 startStopform.Show();
                 Hide();
             }

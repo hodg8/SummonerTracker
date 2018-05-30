@@ -14,10 +14,7 @@ using System.IO;
 namespace SummonerTracker
 {
     public partial class startStopform : Form
-    {
-        inGameform inGameform;
-        folderSelectform folderSelectform;
-
+    {         
         public startStopform()
         {
             InitializeComponent();
@@ -26,11 +23,13 @@ namespace SummonerTracker
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var inGameformCheck = Application.OpenForms.OfType<inGameform>().LastOrDefault();
             try
             {
-                if (inGameform == null)
+                
+                if (inGameformCheck == null)
                 {
-                    inGameform = new inGameform();
+                    inGameform inGameform = new inGameform();
                     inGameform.Show();
                 }                
             }
@@ -45,9 +44,10 @@ namespace SummonerTracker
         {
             try
             {
-                if (inGameform != null)
+                var inGameformCheck = Application.OpenForms.OfType<inGameform>().LastOrDefault();
+                if (inGameformCheck != null)
                 {
-                    inGameform.Close();
+                    inGameformCheck.Close();
                     List<string> folderList = new DirectoryInfo(folderSelectform.Folder).EnumerateFiles("MyNotes.txt", SearchOption.AllDirectories).Select(d => d.FullName).ToList();
                     foreach (string s in folderList)
                     {

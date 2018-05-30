@@ -19,6 +19,9 @@ namespace SummonerTracker
         [DllImport("user32.dll", EntryPoint = "SetWindowLong")]
         static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 
+        FileSearcher fileSearcher = new FileSearcher();
+
+        //Hide form from taskbar/alt-tab
         protected override CreateParams CreateParams
         {
             get
@@ -28,7 +31,6 @@ namespace SummonerTracker
                 return cp;
             }
         }
-
 
         int timeLeftflashADC = 300;
         int timeLefthealADC = 240;
@@ -73,9 +75,8 @@ namespace SummonerTracker
         int timeLeftcleanseTop = 210;
         int timeLeftghostTop = 180;
         int timeLeftteleportTop = 300;
-        int timeLeftigniteTop = 210;
+        int timeLeftigniteTop = 210;       
         
-        FileSearcher fileSearcher = new FileSearcher();
 
         public void OnAdcFlashed(object source, EventArgs args)
         {
@@ -345,6 +346,7 @@ namespace SummonerTracker
         {
             this.TransparencyKey = Color.Black;            
             InitializeComponent();
+            //0x80000 = layered window, 0x20 = transparent
             int initialStyle = GetWindowLong(this.Handle, -20);
             SetWindowLong(this.Handle, -20, initialStyle | 0x80000 | 0x20);
         }        
