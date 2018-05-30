@@ -10,8 +10,7 @@ namespace SummonerTracker
     
     class FileSearcher
     {
-        long lastPosition;
-        folderSelectform folderSelectform;
+        private long lastPosition;        
 
         public delegate void AdcFlashEventHandler(object source, EventArgs args);
         public event AdcFlashEventHandler AdcFlashed;
