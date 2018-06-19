@@ -7,261 +7,93 @@ using System.IO;
 
 namespace SummonerTracker
 {
-    
+
     class FileSearcher
     {
-        private long lastPosition;        
+        private long lastPosition;
 
-        public delegate void AdcFlashEventHandler(object source, EventArgs args);
+        public delegate void AdcFlashEventHandler();
         public event AdcFlashEventHandler AdcFlashed;
-        protected virtual void OnAdcFlashed()
-        {
-            if (AdcFlashed != null)
-            {
-                AdcFlashed(this, EventArgs.Empty);
-            }
-        }
+        
 
-        public delegate void AdcHealEventHandler(object source, EventArgs args);
+        public delegate void AdcHealEventHandler();
         public event AdcHealEventHandler AdcHealed;
-        protected virtual void OnAdcHealed()
-        {
-            if (AdcHealed != null)
-            {
-                AdcHealed(this, EventArgs.Empty);
-            }
-        }
 
-        public delegate void AdcBarrierEventHandler(object source, EventArgs args);
-        public event AdcBarrierEventHandler AdcBarriered;
-        protected virtual void OnAdcBarriered()
-        {
-            if (AdcBarriered != null)
-            {
-                AdcBarriered(this, EventArgs.Empty);
-            }
-        }
+        public delegate void AdcExhaustEventHandler();
+        public event AdcExhaustEventHandler AdcExhausted;
 
-        public delegate void AdcCleanseEventHandler(object source, EventArgs args);
+        public delegate void AdcBarrierEventHandler();
+        public event AdcBarrierEventHandler AdcBarriered;        
+
+        public delegate void AdcCleanseEventHandler();
         public event AdcCleanseEventHandler AdcCleansed;
-        protected virtual void OnAdcCleansed()
-        {
-            if (AdcCleansed != null)
-            {
-                AdcCleansed(this, EventArgs.Empty);
-            }
-        }
 
-        public delegate void JungleFlashEventHandler(object source, EventArgs args);
+        public delegate void AdcTeleportEventHandler();
+        public event AdcTeleportEventHandler AdcTeleported;
+
+        public delegate void JungleFlashEventHandler();
         public event JungleFlashEventHandler JungleFlashed;
-        protected virtual void OnJungleFlashed()
-        {
-            if (JungleFlashed != null)
-            {
-                JungleFlashed(this, EventArgs.Empty);
-            }
-        }
+        
+        public delegate void JungleExhaustEventHandler();
+        public event JungleExhaustEventHandler JungleExhausted;        
 
-        public delegate void JungleExhaustEventHandler(object source, EventArgs args);
-        public event JungleExhaustEventHandler JungleExhausted;
-        protected virtual void OnJungleExhausted()
-        {
-            if (JungleExhausted != null)
-            {
-                JungleExhausted(this, EventArgs.Empty);
-            }
-        }
+        public delegate void JungleIgniteEventHandler();
+        public event JungleIgniteEventHandler JungleIgnited;        
 
-        public delegate void JungleIgniteEventHandler(object source, EventArgs args);
-        public event JungleIgniteEventHandler JungleIgnited;
-        protected virtual void OnJungleIgnited()
-        {
-            if (JungleIgnited != null)
-            {
-                JungleIgnited(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void JungleGhostEventHandler(object source, EventArgs args);
+        public delegate void JungleGhostEventHandler();
         public event JungleGhostEventHandler JungleGhosted;
-        protected virtual void OnJungleGhosted()
-        {
-            if (JungleGhosted != null)
-            {
-                JungleGhosted(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void TopFlashEventHandler(object source, EventArgs args);
+        
+        public delegate void TopFlashEventHandler();
         public event TopFlashEventHandler TopFlashed;
-        protected virtual void OnTopFlashed()
-        {
-            if (TopFlashed != null)
-            {
-                TopFlashed(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void TopTeleportEventHandler(object source, EventArgs args);
+        
+        public delegate void TopTeleportEventHandler();
         public event TopTeleportEventHandler TopTeleported;
-        protected virtual void OnTopTeleported()
-        {
-            if (TopTeleported != null)
-            {
-                TopTeleported(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void TopIgniteEventHandler(object source, EventArgs args);
+        
+        public delegate void TopIgniteEventHandler();
         public event TopIgniteEventHandler TopIgnited;
-        protected virtual void OnTopIgnited()
-        {
-            if (TopIgnited != null)
-            {
-                TopIgnited(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void TopExhaustEventHandler(object source, EventArgs args);
+        
+        public delegate void TopExhaustEventHandler();
         public event TopExhaustEventHandler TopExhausted;
-        protected virtual void OnTopExhausted()
-        {
-            if (TopExhausted != null)
-            {
-                TopExhausted(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void TopGhostEventHandler(object source, EventArgs args);
+       
+        public delegate void TopGhostEventHandler();
         public event TopGhostEventHandler TopGhosted;
-        protected virtual void OnTopGhosted()
-        {
-            if (TopGhosted != null)
-            {
-                TopGhosted(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void MidFlashEventHandler(object source, EventArgs args);
+        
+        public delegate void MidFlashEventHandler();
         public event MidFlashEventHandler MidFlashed;
-        protected virtual void OnMidFlashed()
-        {
-            if (MidFlashed != null)
-            {
-                MidFlashed(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void MidCleanseEventHandler(object source, EventArgs args);
+        
+        public delegate void MidCleanseEventHandler();
         public event MidCleanseEventHandler MidCleansed;
-        protected virtual void OnMidCleansed()
-        {
-            if (MidCleansed != null)
-            {
-                MidCleansed(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void MidBarrierEventHandler(object source, EventArgs args);
+        
+        public delegate void MidBarrierEventHandler();
         public event MidBarrierEventHandler MidBarriered;
-        protected virtual void OnMidBarriered()
-        {
-            if (MidBarriered != null)
-            {
-                MidBarriered(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void MidIgniteEventHandler(object source, EventArgs args);
+        
+        public delegate void MidIgniteEventHandler();
         public event MidIgniteEventHandler MidIgnited;
-        protected virtual void OnMidIgnited()
-        {
-            if (MidIgnited != null)
-            {
-                MidIgnited(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void MidTeleportEventHandler(object source, EventArgs args);
+        
+        public delegate void MidTeleportEventHandler();
         public event MidTeleportEventHandler MidTeleported;
-        protected virtual void OnMidTeleported()
-        {
-            if (MidTeleported != null)
-            {
-                MidTeleported(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void MidHealEventHandler(object source, EventArgs args);
+        
+        public delegate void MidHealEventHandler();
         public event MidHealEventHandler MidHealed;
-        protected virtual void OnMidHealed()
-        {
-            if (MidHealed != null)
-            {
-                MidHealed(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void MidGhostEventHandler(object source, EventArgs args);
+        
+        public delegate void MidGhostEventHandler();
         public event MidGhostEventHandler MidGhosted;
-        protected virtual void OnMidGhosted()
-        {
-            if (MidGhosted != null)
-            {
-                MidGhosted(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void MidExhaustEventHandler(object source, EventArgs args);
+        
+        public delegate void MidExhaustEventHandler();
         public event MidExhaustEventHandler MidExhausted;
-        protected virtual void OnMidExhausted()
-        {
-            if (MidExhausted != null)
-            {
-                MidExhausted(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void SupportFlashEventHandler(object source, EventArgs args);
+        
+        public delegate void SupportFlashEventHandler();
         public event SupportFlashEventHandler SupportFlashed;
-        protected virtual void OnSupportFlashed()
-        {
-            if (SupportFlashed != null)
-            {
-                SupportFlashed(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void SupportIgniteEventHandler(object source, EventArgs args);
+        
+        public delegate void SupportIgniteEventHandler();
         public event SupportIgniteEventHandler SupportIgnited;
-        protected virtual void OnSupportIgnited()
-        {
-            if (SupportIgnited != null)
-            {
-                SupportIgnited(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void SupportExhaustEventHandler(object source, EventArgs args);
+        
+        public delegate void SupportExhaustEventHandler();
         public event SupportExhaustEventHandler SupportExhausted;
-        protected virtual void OnSupportExhausted()
-        {
-            if (SupportExhausted != null)
-            {
-                SupportExhausted(this, EventArgs.Empty);
-            }
-        }
-
-        public delegate void SupportHealEventHandler(object source, EventArgs args);
+        
+        public delegate void SupportHealEventHandler();
         public event SupportHealEventHandler SupportHealed;
-        protected virtual void OnSupportHealed()
-        {
-            if (SupportHealed != null)
-            {
-                SupportHealed(this, EventArgs.Empty);
-            }
-        }             
-
+        
         public void watch()
         {
             FileSystemWatcher fileWatcher = new FileSystemWatcher();
@@ -270,7 +102,7 @@ namespace SummonerTracker
             fileWatcher.IncludeSubdirectories = true;
             fileWatcher.NotifyFilter = NotifyFilters.LastWrite;
             fileWatcher.Filter = "MyNotes.txt";
-            fileWatcher.Changed += new FileSystemEventHandler (OnChanged);
+            fileWatcher.Changed += new FileSystemEventHandler(OnChanged);
             fileWatcher.EnableRaisingEvents = true;
         }
 
@@ -278,180 +110,124 @@ namespace SummonerTracker
         {
             Stream stream = File.Open(e.FullPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             stream.Seek(lastPosition, SeekOrigin.Begin);
-            StreamReader reader = new StreamReader(stream);            
+            StreamReader reader = new StreamReader(stream);
             string line = reader.ReadToEnd();
-            
-            if (line.Contains("ad f"))
+
+            if (line.Contains("ad f") || line.Contains("a f") || line.Contains("adc f"))
             {
-                OnAdcFlashed();
+                AdcFlashed();
             }
-            if (line.Contains("a f"))
+            if (line.Contains("a h") || line.Contains("ad h") || line.Contains("adc h"))
             {
-                OnAdcFlashed();
-            }
-            if (line.Contains("a h"))
-            {
-                OnAdcHealed();
-            }
-            if (line.Contains("ad h"))
-            {
-                OnAdcHealed();
-            }
-            if (line.Contains("a b"))
-            {
-                OnAdcBarriered();
+                AdcHealed();
             }            
-            if (line.Contains("ad b"))
+            if (line.Contains("a b") || line.Contains("ad b") || line.Contains("adc b"))
             {
-                OnAdcBarriered();
+                AdcBarriered();
+            }
+            if (line.Contains("a t") || line.Contains("ad t") || line.Contains("adc t") || line.Contains("a tp") || line.Contains("ad tp") || line.Contains("adc tp"))
+            {
+                AdcTeleported();
+            }
+            if (line.Contains("a e") || line.Contains("ad e") || line.Contains("adc e") || line.Contains("a ex") || line.Contains("ad ex") || line.Contains("adc ex"))
+            {
+                AdcExhausted();
+            }
+            if (line.Contains("a c") || line.Contains("ad c") || line.Contains("adc c"))
+            {
+                AdcCleansed();
             }
             if (line.Contains("t f"))
             {
-                OnTopFlashed();
+                TopFlashed();
             }
-            if (line.Contains("t tp"))
+            if (line.Contains("t tp") || line.Contains("t t"))
             {
-                OnTopTeleported();
-            }
-            if (line.Contains("t t"))
+                TopTeleported();
+            }            
+            if (line.Contains("t i") || line.Contains("t ig"))
             {
-                OnTopTeleported();
-            }
-            if (line.Contains("t i"))
+                TopIgnited();
+            }            
+            if (line.Contains("t e") || line.Contains("t ex"))
             {
-                OnTopIgnited();
-            }
-            if (line.Contains("t ig"))
-            {
-                OnTopIgnited();
-            }
-            if (line.Contains("t e"))
-            {
-                OnTopExhausted();
-            }
-            if (line.Contains("t ex"))
-            {
-                OnTopExhausted();
-            }
+                TopExhausted();
+            }            
             if (line.Contains("t g"))
             {
-                OnTopGhosted();
+                TopGhosted();
             }
-            if (line.Contains("j f"))
+            if (line.Contains("j f") || line.Contains("jg f"))
             {
-                OnJungleFlashed();
-            }
-            if (line.Contains("jg f"))
-            {
-                OnJungleFlashed();
-            }
-            if (line.Contains("j i"))
-            {
-                OnJungleIgnited();
-            }
-            if (line.Contains("jg i"))
-            {
-                OnJungleIgnited();
-            }
-            if (line.Contains("j ig"))
-            {
-                OnJungleIgnited();
-            }
-            if (line.Contains("jg ig"))
-            {
-                OnJungleIgnited();
-            }
-            if (line.Contains("j e"))
-            {
-                OnJungleExhausted();
-            }
-            if (line.Contains("jg e"))
-            {
-                OnJungleExhausted();
-            }
-            if (line.Contains("j ex"))
-            {
-                OnJungleExhausted();
-            }
-            if (line.Contains("jg ex"))
-            {
-                OnJungleExhausted();
-            }
-            if (line.Contains("j g"))
-            {
-                OnJungleGhosted();
-            }
-            if (line.Contains("jg g"))
-            {
-                OnJungleGhosted();
+                JungleFlashed();
             }            
+            if (line.Contains("j i") || line.Contains("jg i") || line.Contains("j ig") || line.Contains("jg ig"))
+            {
+                JungleIgnited();
+            }
+            if (line.Contains("j e") || line.Contains("jg e") || line.Contains("j ex") || line.Contains("jg ex"))
+            {
+                JungleExhausted();
+            }            
+            if (line.Contains("j g") || line.Contains("jg g"))
+            {
+                JungleGhosted();
+            }                       
             if (line.Contains("m f"))
             {
-                OnMidFlashed();
+                MidFlashed();
             }
             if (line.Contains("m b"))
             {
-                OnMidBarriered();
+                MidBarriered();
             }
             if (line.Contains("m i"))
             {
-                OnMidIgnited();
+                MidIgnited();
             }
             if (line.Contains("m ig"))
             {
-                OnMidIgnited();
+                MidIgnited();
             }
-            if (line.Contains("m t"))
+            if (line.Contains("m t") || line.Contains("m tp"))
             {
-                OnMidTeleported();
-            }
-            if (line.Contains("m tp"))
-            {
-                OnMidTeleported();
-            }
+                MidTeleported();
+            }            
             if (line.Contains("m c"))
             {
-                OnMidCleansed();
+                MidCleansed();
             }
-            if (line.Contains("m e"))
+            if (line.Contains("m e") || line.Contains("m ex"))
             {
-                OnMidExhausted();
-            }
-            if (line.Contains("m ex"))
-            {
-                OnMidExhausted();
-            }
+                MidExhausted();
+            }            
             if (line.Contains("m g"))
             {
-                OnMidGhosted();
+                MidGhosted();
             }
             if (line.Contains("m h"))
             {
-                OnMidHealed();
+                MidHealed();
             }
             if (line.Contains("s i"))
             {
-                OnSupportIgnited();
+                SupportIgnited();
             }
             if (line.Contains("s f"))
             {
-                OnSupportFlashed();
+                SupportFlashed();
             }
             if (line.Contains("s ig"))
             {
-                OnSupportIgnited();
+                SupportIgnited();
             }
-            if (line.Contains("s e"))
+            if (line.Contains("s e") || line.Contains("s ex"))
             {
-                OnSupportExhausted();
-            }
-            if (line.Contains("s ex"))
-            {
-                OnSupportExhausted();
-            }
+                SupportExhausted();
+            }            
             if (line.Contains("s h"))
             {
-                OnSupportHealed();
+                SupportHealed();
             }
             
             lastPosition = stream.Position;

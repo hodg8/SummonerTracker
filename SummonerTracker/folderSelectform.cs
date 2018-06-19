@@ -29,14 +29,19 @@ namespace SummonerTracker
             {
                 Properties.Settings.Default.MyNotesPath = folderBrowser.SelectedPath;
                 Properties.Settings.Default.Save();
+
+                if (Properties.Settings.Default.MyNotesPath != null && Properties.Settings.Default.MyNotesPath.Length > 0)
+                {
+                    startStopform startStopform = new startStopform();
+                    startStopform.Show();
+                    Hide();
+                }
             }
 
-            if (Properties.Settings.Default.MyNotesPath != null && Properties.Settings.Default.MyNotesPath.Length > 0)
+            else
             {
-                startStopform startStopform = new startStopform();
-                startStopform.Show();
-                Hide();
-            }
+                MessageBox.Show("Please select the most recent patch folder!");
+            }            
         }        
     }
 }

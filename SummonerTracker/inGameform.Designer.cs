@@ -29,281 +29,298 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.timer5 = new System.Windows.Forms.Timer(this.components);
-            this.timer6 = new System.Windows.Forms.Timer(this.components);
-            this.timer7 = new System.Windows.Forms.Timer(this.components);
-            this.timer8 = new System.Windows.Forms.Timer(this.components);
-            this.timer9 = new System.Windows.Forms.Timer(this.components);
-            this.timer10 = new System.Windows.Forms.Timer(this.components);
-            this.timer11 = new System.Windows.Forms.Timer(this.components);
-            this.timer12 = new System.Windows.Forms.Timer(this.components);
-            this.timer13 = new System.Windows.Forms.Timer(this.components);
-            this.timer14 = new System.Windows.Forms.Timer(this.components);
-            this.timer15 = new System.Windows.Forms.Timer(this.components);
-            this.timer16 = new System.Windows.Forms.Timer(this.components);
-            this.timer17 = new System.Windows.Forms.Timer(this.components);
-            this.timer18 = new System.Windows.Forms.Timer(this.components);
-            this.timer19 = new System.Windows.Forms.Timer(this.components);
-            this.timer20 = new System.Windows.Forms.Timer(this.components);
-            this.timer21 = new System.Windows.Forms.Timer(this.components);
-            this.timer22 = new System.Windows.Forms.Timer(this.components);
-            this.timer23 = new System.Windows.Forms.Timer(this.components);
-            this.timer24 = new System.Windows.Forms.Timer(this.components);
+            this.tmrAdcFlash = new System.Windows.Forms.Timer(this.components);
+            this.lblTopSecondary = new System.Windows.Forms.Label();
+            this.tmrAdcHeal = new System.Windows.Forms.Timer(this.components);
+            this.lblTopFlash = new System.Windows.Forms.Label();
+            this.tmrAdcBarrier = new System.Windows.Forms.Timer(this.components);
+            this.lblJgSecondary = new System.Windows.Forms.Label();
+            this.lblJgFlash = new System.Windows.Forms.Label();
+            this.lblMidSecondary = new System.Windows.Forms.Label();
+            this.lblMidFlash = new System.Windows.Forms.Label();
+            this.lblAdcSecondary = new System.Windows.Forms.Label();
+            this.lblAdcFlash = new System.Windows.Forms.Label();
+            this.lblSuppSecondary = new System.Windows.Forms.Label();
+            this.lblSuppFlash = new System.Windows.Forms.Label();
+            this.tmrTopFlash = new System.Windows.Forms.Timer(this.components);
+            this.tmrTopTP = new System.Windows.Forms.Timer(this.components);
+            this.tmrTopEx = new System.Windows.Forms.Timer(this.components);
+            this.tmrTopIg = new System.Windows.Forms.Timer(this.components);
+            this.tmrTopGhost = new System.Windows.Forms.Timer(this.components);
+            this.tmrJgFlash = new System.Windows.Forms.Timer(this.components);
+            this.tmrJgIg = new System.Windows.Forms.Timer(this.components);
+            this.tmrJgGhost = new System.Windows.Forms.Timer(this.components);
+            this.tmrMidFlash = new System.Windows.Forms.Timer(this.components);
+            this.tmrMidBarrier = new System.Windows.Forms.Timer(this.components);
+            this.tmrMidEx = new System.Windows.Forms.Timer(this.components);
+            this.tmrMidIg = new System.Windows.Forms.Timer(this.components);
+            this.tmrMidGhost = new System.Windows.Forms.Timer(this.components);
+            this.tmrMidCleanse = new System.Windows.Forms.Timer(this.components);
+            this.tmrMidHeal = new System.Windows.Forms.Timer(this.components);
+            this.tmrMidTP = new System.Windows.Forms.Timer(this.components);
+            this.tmrSuppFlash = new System.Windows.Forms.Timer(this.components);
+            this.tmrSuppIg = new System.Windows.Forms.Timer(this.components);
+            this.tmrSuppEx = new System.Windows.Forms.Timer(this.components);
+            this.tmrSuppHeal = new System.Windows.Forms.Timer(this.components);
+            this.tmrJgEx = new System.Windows.Forms.Timer(this.components);
+            this.tmrAdcTp = new System.Windows.Forms.Timer(this.components);
+            this.tmrAdcCleanse = new System.Windows.Forms.Timer(this.components);
+            this.tmrAdcExhaust = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(16, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
-            this.label1.TabIndex = 0;
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(16, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
-            this.label2.TabIndex = 1;
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 1000;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(108, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 17);
-            this.label3.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(108, 24);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 17);
-            this.label4.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(193, 5);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 17);
-            this.label5.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(193, 24);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 17);
-            this.label6.TabIndex = 5;
-            // 
-            // label7
+            // tmrAdcFlash
+            // 
+            this.tmrAdcFlash.Interval = 1000;
+            this.tmrAdcFlash.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblTopSecondary
+            // 
+            this.lblTopSecondary.AutoSize = true;
+            this.lblTopSecondary.BackColor = System.Drawing.Color.Transparent;
+            this.lblTopSecondary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopSecondary.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTopSecondary.Location = new System.Drawing.Point(16, 5);
+            this.lblTopSecondary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTopSecondary.Name = "lblTopSecondary";
+            this.lblTopSecondary.Size = new System.Drawing.Size(0, 17);
+            this.lblTopSecondary.TabIndex = 0;
+            // 
+            // tmrAdcHeal
+            // 
+            this.tmrAdcHeal.Interval = 1000;
+            this.tmrAdcHeal.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // lblTopFlash
+            // 
+            this.lblTopFlash.AutoSize = true;
+            this.lblTopFlash.BackColor = System.Drawing.Color.Transparent;
+            this.lblTopFlash.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopFlash.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTopFlash.Location = new System.Drawing.Point(16, 24);
+            this.lblTopFlash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTopFlash.Name = "lblTopFlash";
+            this.lblTopFlash.Size = new System.Drawing.Size(0, 17);
+            this.lblTopFlash.TabIndex = 1;
+            // 
+            // tmrAdcBarrier
+            // 
+            this.tmrAdcBarrier.Interval = 1000;
+            this.tmrAdcBarrier.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // lblJgSecondary
+            // 
+            this.lblJgSecondary.AutoSize = true;
+            this.lblJgSecondary.BackColor = System.Drawing.Color.Transparent;
+            this.lblJgSecondary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJgSecondary.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblJgSecondary.Location = new System.Drawing.Point(108, 5);
+            this.lblJgSecondary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJgSecondary.Name = "lblJgSecondary";
+            this.lblJgSecondary.Size = new System.Drawing.Size(0, 17);
+            this.lblJgSecondary.TabIndex = 2;
+            // 
+            // lblJgFlash
+            // 
+            this.lblJgFlash.AutoSize = true;
+            this.lblJgFlash.BackColor = System.Drawing.Color.Transparent;
+            this.lblJgFlash.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJgFlash.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblJgFlash.Location = new System.Drawing.Point(108, 24);
+            this.lblJgFlash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblJgFlash.Name = "lblJgFlash";
+            this.lblJgFlash.Size = new System.Drawing.Size(0, 17);
+            this.lblJgFlash.TabIndex = 3;
+            // 
+            // lblMidSecondary
+            // 
+            this.lblMidSecondary.AutoSize = true;
+            this.lblMidSecondary.BackColor = System.Drawing.Color.Transparent;
+            this.lblMidSecondary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMidSecondary.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMidSecondary.Location = new System.Drawing.Point(193, 5);
+            this.lblMidSecondary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMidSecondary.Name = "lblMidSecondary";
+            this.lblMidSecondary.Size = new System.Drawing.Size(0, 17);
+            this.lblMidSecondary.TabIndex = 4;
+            // 
+            // lblMidFlash
+            // 
+            this.lblMidFlash.AutoSize = true;
+            this.lblMidFlash.BackColor = System.Drawing.Color.Transparent;
+            this.lblMidFlash.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMidFlash.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMidFlash.Location = new System.Drawing.Point(193, 24);
+            this.lblMidFlash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMidFlash.Name = "lblMidFlash";
+            this.lblMidFlash.Size = new System.Drawing.Size(0, 17);
+            this.lblMidFlash.TabIndex = 5;
+            // 
+            // lblAdcSecondary
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(283, 5);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 17);
-            this.label7.TabIndex = 6;
+            this.lblAdcSecondary.AutoSize = true;
+            this.lblAdcSecondary.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdcSecondary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdcSecondary.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAdcSecondary.Location = new System.Drawing.Point(283, 5);
+            this.lblAdcSecondary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdcSecondary.Name = "lblAdcSecondary";
+            this.lblAdcSecondary.Size = new System.Drawing.Size(0, 17);
+            this.lblAdcSecondary.TabIndex = 6;
             // 
-            // label8
+            // lblAdcFlash
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(283, 24);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 17);
-            this.label8.TabIndex = 7;
+            this.lblAdcFlash.AutoSize = true;
+            this.lblAdcFlash.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdcFlash.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdcFlash.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAdcFlash.Location = new System.Drawing.Point(283, 24);
+            this.lblAdcFlash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdcFlash.Name = "lblAdcFlash";
+            this.lblAdcFlash.Size = new System.Drawing.Size(0, 17);
+            this.lblAdcFlash.TabIndex = 7;
             // 
-            // label9
+            // lblSuppSecondary
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(382, 5);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 17);
-            this.label9.TabIndex = 8;
+            this.lblSuppSecondary.AutoSize = true;
+            this.lblSuppSecondary.BackColor = System.Drawing.Color.Transparent;
+            this.lblSuppSecondary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuppSecondary.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSuppSecondary.Location = new System.Drawing.Point(382, 5);
+            this.lblSuppSecondary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSuppSecondary.Name = "lblSuppSecondary";
+            this.lblSuppSecondary.Size = new System.Drawing.Size(0, 17);
+            this.lblSuppSecondary.TabIndex = 8;
             // 
-            // label10
+            // lblSuppFlash
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(382, 24);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 17);
-            this.label10.TabIndex = 9;
+            this.lblSuppFlash.AutoSize = true;
+            this.lblSuppFlash.BackColor = System.Drawing.Color.Transparent;
+            this.lblSuppFlash.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuppFlash.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSuppFlash.Location = new System.Drawing.Point(382, 24);
+            this.lblSuppFlash.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSuppFlash.Name = "lblSuppFlash";
+            this.lblSuppFlash.Size = new System.Drawing.Size(0, 17);
+            this.lblSuppFlash.TabIndex = 9;
             // 
-            // timer4
+            // tmrTopFlash
             // 
-            this.timer4.Interval = 1000;
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            this.tmrTopFlash.Interval = 1000;
+            this.tmrTopFlash.Tick += new System.EventHandler(this.timer4_Tick);
             // 
-            // timer5
+            // tmrTopTP
             // 
-            this.timer5.Interval = 1000;
-            this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
+            this.tmrTopTP.Interval = 1000;
+            this.tmrTopTP.Tick += new System.EventHandler(this.timer5_Tick);
             // 
-            // timer6
+            // tmrTopEx
             // 
-            this.timer6.Interval = 1000;
-            this.timer6.Tick += new System.EventHandler(this.timer6_Tick);
+            this.tmrTopEx.Interval = 1000;
+            this.tmrTopEx.Tick += new System.EventHandler(this.timer6_Tick);
             // 
-            // timer7
+            // tmrTopIg
             // 
-            this.timer7.Interval = 1000;
-            this.timer7.Tick += new System.EventHandler(this.timer7_Tick);
+            this.tmrTopIg.Interval = 1000;
+            this.tmrTopIg.Tick += new System.EventHandler(this.timer7_Tick);
             // 
-            // timer8
+            // tmrTopGhost
             // 
-            this.timer8.Interval = 1000;
-            this.timer8.Tick += new System.EventHandler(this.timer8_Tick);
+            this.tmrTopGhost.Interval = 1000;
+            this.tmrTopGhost.Tick += new System.EventHandler(this.timer8_Tick);
             // 
-            // timer9
+            // tmrJgFlash
             // 
-            this.timer9.Interval = 1000;
-            this.timer9.Tick += new System.EventHandler(this.timer9_Tick);
+            this.tmrJgFlash.Interval = 1000;
+            this.tmrJgFlash.Tick += new System.EventHandler(this.timer9_Tick);
             // 
-            // timer10
+            // tmrJgIg
             // 
-            this.timer10.Interval = 1000;
-            this.timer10.Tick += new System.EventHandler(this.timer10_Tick);
+            this.tmrJgIg.Interval = 1000;
+            this.tmrJgIg.Tick += new System.EventHandler(this.timer10_Tick);
             // 
-            // timer11
+            // tmrJgGhost
             // 
-            this.timer11.Interval = 1000;
-            this.timer11.Tick += new System.EventHandler(this.timer11_Tick);
+            this.tmrJgGhost.Interval = 1000;
+            this.tmrJgGhost.Tick += new System.EventHandler(this.timer11_Tick);
             // 
-            // timer12
+            // tmrMidFlash
             // 
-            this.timer12.Interval = 1000;
-            this.timer12.Tick += new System.EventHandler(this.timer12_Tick);
+            this.tmrMidFlash.Interval = 1000;
+            this.tmrMidFlash.Tick += new System.EventHandler(this.timer12_Tick);
             // 
-            // timer13
+            // tmrMidBarrier
             // 
-            this.timer13.Interval = 1000;
-            this.timer13.Tick += new System.EventHandler(this.timer13_Tick);
+            this.tmrMidBarrier.Interval = 1000;
+            this.tmrMidBarrier.Tick += new System.EventHandler(this.timer13_Tick);
             // 
-            // timer14
+            // tmrMidEx
             // 
-            this.timer14.Interval = 1000;
-            this.timer14.Tick += new System.EventHandler(this.timer14_Tick);
+            this.tmrMidEx.Interval = 1000;
+            this.tmrMidEx.Tick += new System.EventHandler(this.timer14_Tick);
             // 
-            // timer15
+            // tmrMidIg
             // 
-            this.timer15.Interval = 1000;
-            this.timer15.Tick += new System.EventHandler(this.timer15_Tick);
+            this.tmrMidIg.Interval = 1000;
+            this.tmrMidIg.Tick += new System.EventHandler(this.timer15_Tick);
             // 
-            // timer16
+            // tmrMidGhost
             // 
-            this.timer16.Interval = 1000;
-            this.timer16.Tick += new System.EventHandler(this.timer16_Tick);
+            this.tmrMidGhost.Interval = 1000;
+            this.tmrMidGhost.Tick += new System.EventHandler(this.timer16_Tick);
             // 
-            // timer17
+            // tmrMidCleanse
             // 
-            this.timer17.Interval = 1000;
-            this.timer17.Tick += new System.EventHandler(this.timer17_Tick);
+            this.tmrMidCleanse.Interval = 1000;
+            this.tmrMidCleanse.Tick += new System.EventHandler(this.timer17_Tick);
             // 
-            // timer18
+            // tmrMidHeal
             // 
-            this.timer18.Interval = 1000;
-            this.timer18.Tick += new System.EventHandler(this.timer18_Tick);
+            this.tmrMidHeal.Interval = 1000;
+            this.tmrMidHeal.Tick += new System.EventHandler(this.timer18_Tick);
             // 
-            // timer19
+            // tmrMidTP
             // 
-            this.timer19.Interval = 1000;
-            this.timer19.Tick += new System.EventHandler(this.timer19_Tick);
+            this.tmrMidTP.Interval = 1000;
+            this.tmrMidTP.Tick += new System.EventHandler(this.timer19_Tick);
             // 
-            // timer20
+            // tmrSuppFlash
             // 
-            this.timer20.Interval = 1000;
-            this.timer20.Tick += new System.EventHandler(this.timer20_Tick);
+            this.tmrSuppFlash.Interval = 1000;
+            this.tmrSuppFlash.Tick += new System.EventHandler(this.timer20_Tick);
             // 
-            // timer21
+            // tmrSuppIg
             // 
-            this.timer21.Interval = 1000;
-            this.timer21.Tick += new System.EventHandler(this.timer21_Tick);
+            this.tmrSuppIg.Interval = 1000;
+            this.tmrSuppIg.Tick += new System.EventHandler(this.timer21_Tick);
             // 
-            // timer22
+            // tmrSuppEx
             // 
-            this.timer22.Interval = 1000;
-            this.timer22.Tick += new System.EventHandler(this.timer22_Tick);
+            this.tmrSuppEx.Interval = 1000;
+            this.tmrSuppEx.Tick += new System.EventHandler(this.timer22_Tick);
             // 
-            // timer23
+            // tmrSuppHeal
             // 
-            this.timer23.Interval = 1000;
-            this.timer23.Tick += new System.EventHandler(this.timer23_Tick);
+            this.tmrSuppHeal.Interval = 1000;
+            this.tmrSuppHeal.Tick += new System.EventHandler(this.timer23_Tick);
             // 
-            // timer24
+            // tmrJgEx
             // 
-            this.timer24.Interval = 1000;
-            this.timer24.Tick += new System.EventHandler(this.timer24_Tick);
+            this.tmrJgEx.Interval = 1000;
+            this.tmrJgEx.Tick += new System.EventHandler(this.timer24_Tick);
+            // 
+            // tmrAdcTp
+            // 
+            this.tmrAdcTp.Interval = 1000;
+            this.tmrAdcTp.Tick += new System.EventHandler(this.tmrAdcTp_Tick);
+            // 
+            // tmrAdcCleanse
+            // 
+            this.tmrAdcCleanse.Tick += new System.EventHandler(this.tmrAdcCleanse_Tick);
+            // 
+            // tmrAdcExhaust
+            // 
+            this.tmrAdcExhaust.Interval = 1000;
+            this.tmrAdcExhaust.Tick += new System.EventHandler(this.tmrAdcExhaust_Tick);
             // 
             // inGameform
             // 
@@ -311,18 +328,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(468, 48);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSuppFlash);
+            this.Controls.Add(this.lblSuppSecondary);
+            this.Controls.Add(this.lblAdcFlash);
+            this.Controls.Add(this.lblAdcSecondary);
+            this.Controls.Add(this.lblMidFlash);
+            this.Controls.Add(this.lblMidSecondary);
+            this.Controls.Add(this.lblJgFlash);
+            this.Controls.Add(this.lblJgSecondary);
+            this.Controls.Add(this.lblTopFlash);
+            this.Controls.Add(this.lblTopSecondary);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "inGameform";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -336,40 +353,43 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer timer1;
-        public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Timer timer4;
-        private System.Windows.Forms.Timer timer5;
-        private System.Windows.Forms.Timer timer6;
-        private System.Windows.Forms.Timer timer7;
-        private System.Windows.Forms.Timer timer8;
-        private System.Windows.Forms.Timer timer9;
-        private System.Windows.Forms.Timer timer10;
-        private System.Windows.Forms.Timer timer11;
-        private System.Windows.Forms.Timer timer12;
-        private System.Windows.Forms.Timer timer13;
-        private System.Windows.Forms.Timer timer14;
-        private System.Windows.Forms.Timer timer15;
-        private System.Windows.Forms.Timer timer16;
-        private System.Windows.Forms.Timer timer17;
-        private System.Windows.Forms.Timer timer18;
-        private System.Windows.Forms.Timer timer19;
-        private System.Windows.Forms.Timer timer20;
-        private System.Windows.Forms.Timer timer21;
-        private System.Windows.Forms.Timer timer22;
-        private System.Windows.Forms.Timer timer23;
-        private System.Windows.Forms.Timer timer24;
+        private System.Windows.Forms.Timer tmrAdcFlash;
+        private System.Windows.Forms.Label lblTopSecondary;
+        private System.Windows.Forms.Timer tmrAdcHeal;
+        private System.Windows.Forms.Label lblTopFlash;
+        private System.Windows.Forms.Timer tmrAdcBarrier;
+        private System.Windows.Forms.Label lblJgSecondary;
+        private System.Windows.Forms.Label lblJgFlash;
+        private System.Windows.Forms.Label lblMidSecondary;
+        private System.Windows.Forms.Label lblMidFlash;
+        private System.Windows.Forms.Label lblAdcSecondary;
+        private System.Windows.Forms.Label lblAdcFlash;
+        private System.Windows.Forms.Label lblSuppSecondary;
+        private System.Windows.Forms.Label lblSuppFlash;
+        private System.Windows.Forms.Timer tmrTopFlash;
+        private System.Windows.Forms.Timer tmrTopTP;
+        private System.Windows.Forms.Timer tmrTopEx;
+        private System.Windows.Forms.Timer tmrTopIg;
+        private System.Windows.Forms.Timer tmrTopGhost;
+        private System.Windows.Forms.Timer tmrJgFlash;
+        private System.Windows.Forms.Timer tmrJgIg;
+        private System.Windows.Forms.Timer tmrJgGhost;
+        private System.Windows.Forms.Timer tmrMidFlash;
+        private System.Windows.Forms.Timer tmrMidBarrier;
+        private System.Windows.Forms.Timer tmrMidEx;
+        private System.Windows.Forms.Timer tmrMidIg;
+        private System.Windows.Forms.Timer tmrMidGhost;
+        private System.Windows.Forms.Timer tmrMidCleanse;
+        private System.Windows.Forms.Timer tmrMidHeal;
+        private System.Windows.Forms.Timer tmrMidTP;
+        private System.Windows.Forms.Timer tmrSuppFlash;
+        private System.Windows.Forms.Timer tmrSuppIg;
+        private System.Windows.Forms.Timer tmrSuppEx;
+        private System.Windows.Forms.Timer tmrSuppHeal;
+        private System.Windows.Forms.Timer tmrJgEx;
+        private System.Windows.Forms.Timer tmrAdcTp;
+        private System.Windows.Forms.Timer tmrAdcCleanse;
+        private System.Windows.Forms.Timer tmrAdcExhaust;
     }
 }
 

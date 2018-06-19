@@ -32,312 +32,344 @@ namespace SummonerTracker
             }
         }
 
-        int timeLeftflashADC = 300;
-        int timeLefthealADC = 240;
-        int timeLeftbarrierADC = 180;
-        int timeLeftexhaustADC = 210;
-        int timeLeftcleanseADC = 210;
-        int timeLeftghostADC = 180;
-        int timeLeftteleportADC = 300;
-        int timeLeftigniteADC = 210;
+        int timeLeftFlashADC = 300;
+        int timeLeftHealADC = 270;
+        int timeLeftBarrierADC = 180;
+        int timeLeftExhaustADC = 210;
+        int timeLeftCleanseADC = 210;
+        int timeLeftGhostADC = 180;
+        int timeLeftTeleportADC = 300;
+        int timeLeftIgniteADC = 210;
 
-        int timeLeftflashJungle = 300;
-        int timeLefthealJungle = 240;
-        int timeLeftbarrierJungle = 180;
-        int timeLeftexhaustJungle = 210;
-        int timeLeftcleanseJungle = 210;
-        int timeLeftghostJungle = 180;
-        int timeLeftteleportJungle = 300;
-        int timeLeftigniteJungle = 210;
+        int timeLeftFlashJungle = 300;
+        int timeLeftHealJungle = 270;
+        int timeLeftBarrierJungle = 180;
+        int timeLeftExhaustJungle = 210;
+        int timeLeftCleanseJungle = 210;
+        int timeLeftGhostJungle = 180;
+        int timeLeftTeleportJungle = 300;
+        int timeLeftIgniteJungle = 210;
 
-        int timeLeftflashSupp = 300;
-        int timeLefthealSupp = 240;
-        int timeLeftbarrierSupp = 180;
-        int timeLeftexhaustSupp = 210;
-        int timeLeftcleanseSupp = 210;
-        int timeLeftghostSupp = 180;
-        int timeLeftteleportSupp = 300;
-        int timeLeftigniteSupp = 210;
+        int timeLeftFlashSupp = 300;
+        int timeLeftHealSupp = 270;
+        int timeLeftBarrierSupp = 180;
+        int timeLeftExhaustSupp = 210;
+        int timeLeftCleanseSupp = 210;
+        int timeLeftGhostSupp = 180;
+        int timeLeftTeleportSupp = 300;
+        int timeLeftIgniteSupp = 210;
 
-        int timeLeftflashMid = 300;
-        int timeLefthealMid = 240;
-        int timeLeftbarrierMid = 180;
-        int timeLeftexhaustMid = 210;
-        int timeLeftcleanseMid = 210;
-        int timeLeftghostMid = 180;
-        int timeLeftteleportMid = 300;
-        int timeLeftigniteMid = 210;
+        int timeLeftFlashMid = 300;
+        int timeLeftHealMid = 270;
+        int timeLeftBarrierMid = 180;
+        int timeLeftExhaustMid = 210;
+        int timeLeftCleanseMid = 210;
+        int timeLeftGhostMid = 180;
+        int timeLeftTeleportMid = 300;
+        int timeLeftIgniteMid = 210;
 
-        int timeLeftflashTop = 300;
-        int timeLefthealTop = 240;
-        int timeLeftbarrierTop = 180;
-        int timeLeftexhaustTop = 210;
-        int timeLeftcleanseTop = 210;
-        int timeLeftghostTop = 180;
-        int timeLeftteleportTop = 300;
-        int timeLeftigniteTop = 210;       
-        
+        int timeLeftFlashTop = 300;
+        int timeLeftHealTop = 270;
+        int timeLeftBarrierTop = 180;
+        int timeLeftExhaustTop = 210;
+        int timeLeftCleanseTop = 210;
+        int timeLeftGhostTop = 180;
+        int timeLeftTeleportTop = 300;
+        int timeLeftIgniteTop = 210;     
 
-        public void OnAdcFlashed(object source, EventArgs args)
+        public void OnAdcFlashed()
         {
-            if (!timer1.Enabled)
+            if (!tmrAdcFlash.Enabled)
             {
                 Invoke(new Action(() =>
                 {
-                    timer1.Start();
+                    tmrAdcFlash.Start();
                 }));
             }            
         }
 
-        public void OnAdcHealed(object source, EventArgs args)
+        public void OnAdcHealed()
         {
-            if (label7.Text.Length == 0)
+            if (lblAdcSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer2.Start();
+                    tmrAdcHeal.Start();
                 }));
             }
         }
 
-        public void OnAdcBarriered(object source, EventArgs args)
+        public void OnAdcCleansed()
         {
-            if (label7.Text.Length == 0)
+            if (lblAdcSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer3.Start();
+                    tmrAdcCleanse.Start();
                 }));
             }
         }
 
-        public void OnJungleFlashed(object source, EventArgs args)
+        public void OnAdcTeleported()
         {
-            if (label4.Text.Length == 0)
+            if (lblAdcSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer9.Start();
+                    tmrAdcTp.Start();
                 }));
             }
         }
 
-        public void OnJungleExhausted(object source, EventArgs args)
+        public void OnAdcExhausted()
         {
-            if (label3.Text.Length == 0)
+            if (lblAdcSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer24.Start();
+                    tmrAdcExhaust.Start();
                 }));
             }
         }
 
-        public void OnJungleIgnited(object source, EventArgs args)
+        public void OnAdcBarriered()
         {
-            if (label3.Text.Length == 0)
+            if (lblAdcSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer10.Start();
+                    tmrAdcBarrier.Start();
                 }));
             }
         }
 
-        public void OnJungleGhosted(object source, EventArgs args)
+        public void OnJungleFlashed()
         {
-            if (label3.Text.Length == 0)
+            if (lblJgSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer11.Start();
+                    tmrJgFlash.Start();
                 }));
             }
         }
 
-        public void OnTopFlashed(object source, EventArgs args)
+        public void OnJungleExhausted()
         {
-            if (label2.Text.Length == 0)
+            if (lblJgSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer4.Start();
+                    tmrJgEx.Start();
                 }));
             }
         }
 
-        public void OnTopTeleported(object source, EventArgs args)
+        public void OnJungleIgnited()
         {
-            if (label1.Text.Length == 0)
+            if (lblJgSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer5.Start();
+                    tmrJgIg.Start();
                 }));
             }
         }
 
-        public void OnTopIgnited(object source, EventArgs args)
+        public void OnJungleGhosted()
         {
-            if (label1.Text.Length == 0)
+            if (lblJgSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer7.Start();
+                    tmrJgGhost.Start();
                 }));
             }
         }
 
-        public void OnTopExhausted(object source, EventArgs args)
+        public void OnTopFlashed()
         {
-            if (label1.Text.Length == 0)
+            if (lblTopFlash.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer6.Start();
+                    tmrTopFlash.Start();
                 }));
             }
         }
 
-        public void OnTopGhosted(object source, EventArgs args)
+        public void OnTopTeleported()
         {
-            if (label1.Text.Length == 0)
+            if (lblTopSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer8.Start();
+                    tmrTopTP.Start();
                 }));
             }
         }
 
-        public void OnMidFlashed(object source, EventArgs args)
+        public void OnTopIgnited()
         {
-            if (label6.Text.Length == 0)
+            if (lblTopSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer12.Start();
+                    tmrTopIg.Start();
                 }));
             }
         }
 
-        public void OnMidIgnited(object source, EventArgs args)
+        public void OnTopExhausted()
         {
-            if (label5.Text.Length == 0)
+            if (lblTopSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer15.Start();
+                    tmrTopEx.Start();
                 }));
             }
         }
 
-        public void OnMidExhausted(object source, EventArgs args)
+        public void OnTopGhosted()
         {
-            if (label5.Text.Length == 0)
+            if (lblTopSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer14.Start();
+                    tmrTopGhost.Start();
                 }));
             }
         }
 
-        public void OnMidCleansed(object source, EventArgs args)
+        public void OnMidFlashed()
         {
-            if (label5.Text.Length == 0)
+            if (lblMidFlash.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer17.Start();
+                    tmrMidFlash.Start();
                 }));
             }
         }
 
-        public void OnMidTeleported(object source, EventArgs args)
+        public void OnMidIgnited()
         {
-            if (label5.Text.Length == 0)
+            if (lblMidSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer19.Start();
+                    tmrMidIg.Start();
                 }));
             }
         }
 
-        public void OnMidBarriered(object source, EventArgs args)
+        public void OnMidExhausted()
         {
-            if (label5.Text.Length == 0)
+            if (lblMidSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer13.Start();
+                    tmrMidEx.Start();
                 }));
             }
         }
 
-        public void OnMidGhosted(object source, EventArgs args)
+        public void OnMidCleansed()
         {
-            if (label5.Text.Length == 0)
+            if (lblMidSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer16.Start();
+                    tmrMidCleanse.Start();
                 }));
             }
         }
 
-        public void OnMidHealed(object source, EventArgs args)
+        public void OnMidTeleported()
         {
-            if (label5.Text.Length == 0)
+            if (lblMidSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer18.Start();
+                    tmrMidTP.Start();
                 }));
             }
         }
 
-        public void OnSupportFlashed(object source, EventArgs args)
+        public void OnMidBarriered()
         {
-            if (label10.Text.Length == 0)
+            if (lblMidSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer20.Start();
+                    tmrMidBarrier.Start();
                 }));
             }
         }
 
-        public void OnSupportHealed(object source, EventArgs args)
+        public void OnMidGhosted()
         {
-            if (label9.Text.Length == 0)
+            if (lblMidSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer23.Start();
+                    tmrMidGhost.Start();
                 }));
             }
         }
 
-        public void OnSupportIgnited(object source, EventArgs args)
+        public void OnMidHealed()
         {
-            if (label9.Text.Length == 0)
+            if (lblMidSecondary.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer21.Start();
+                    tmrMidHeal.Start();
                 }));
             }
         }
 
-        public void OnSupportExhausted(object source, EventArgs args)
+        public void OnSupportFlashed()
         {
-            if (label9.Text.Length == 0)
+            if (lblSuppFlash.Text.Length == 0)
             {
                 Invoke(new Action(() =>
                 {
-                    timer22.Start();
+                    tmrSuppFlash.Start();
+                }));
+            }
+        }
+
+        public void OnSupportHealed()
+        {
+            if (lblSuppSecondary.Text.Length == 0)
+            {
+                Invoke(new Action(() =>
+                {
+                    tmrSuppHeal.Start();
+                }));
+            }
+        }
+
+        public void OnSupportIgnited()
+        {
+            if (lblSuppSecondary.Text.Length == 0)
+            {
+                Invoke(new Action(() =>
+                {
+                    tmrSuppIg.Start();
+                }));
+            }
+        }
+
+        public void OnSupportExhausted()
+        {
+            if (lblSuppSecondary.Text.Length == 0)
+            {
+                Invoke(new Action(() =>
+                {
+                    tmrSuppEx.Start();
                 }));
             }
         }
@@ -355,6 +387,9 @@ namespace SummonerTracker
         {            
             fileSearcher.AdcFlashed += OnAdcFlashed;
             fileSearcher.AdcHealed += OnAdcHealed;
+            fileSearcher.AdcTeleported += OnAdcTeleported;
+            fileSearcher.AdcExhausted += OnAdcExhausted;
+            fileSearcher.AdcCleansed += OnAdcCleansed;
             fileSearcher.AdcBarriered += OnAdcBarriered;
             fileSearcher.JungleExhausted += OnJungleExhausted;
             fileSearcher.JungleGhosted += OnJungleGhosted;
@@ -377,320 +412,359 @@ namespace SummonerTracker
             fileSearcher.SupportFlashed += OnSupportFlashed;
             fileSearcher.SupportHealed += OnSupportHealed;
             fileSearcher.SupportIgnited += OnSupportIgnited;
-            
+
             fileSearcher.watch();            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timeLeftflashADC--;
-            if (timeLeftflashADC == 0)
+            timeLeftFlashADC--;
+            if (timeLeftFlashADC == 0)
             {
-                timer1.Stop();
-                label8.Text = "";
-                timeLeftflashADC = 300;
+                tmrAdcFlash.Stop();
+                lblAdcFlash.Text = "";
+                timeLeftFlashADC = 300;
                 return;
             }
-            label8.Text = "ADC F " + timeLeftflashADC.ToString();
+            lblAdcFlash.Text = "ADC F " + timeLeftFlashADC.ToString();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            timeLefthealADC--;
-            if (timeLefthealADC == 0)
+            timeLeftHealADC--;
+            if (timeLeftHealADC == 0)
             {
-                timer2.Stop();
-                label7.Text = "";
-                timeLefthealADC = 240;
+                tmrAdcHeal.Stop();
+                lblAdcSecondary.Text = "";
+                timeLeftHealADC = 240;
                 return;
             }
-            label7.Text = "ADC H " + timeLefthealADC.ToString();
+            lblAdcSecondary.Text = "ADC H " + timeLeftHealADC.ToString();
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            timeLeftbarrierADC--;
-            if (timeLeftbarrierADC == 0)
+            timeLeftBarrierADC--;
+            if (timeLeftBarrierADC == 0)
             {
-                timer3.Stop();
-                label7.Text = "";
-                timeLefthealADC = 180;
+                tmrAdcBarrier.Stop();
+                lblAdcSecondary.Text = "";
+                timeLeftHealADC = 180;
                 return;
             }
-            label7.Text = "ADC B " + timeLeftbarrierADC.ToString();
+            lblAdcSecondary.Text = "ADC B " + timeLeftBarrierADC.ToString();
         }
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            timeLeftflashTop--;
-            if (timeLeftflashTop == 0)
+            timeLeftFlashTop--;
+            if (timeLeftFlashTop == 0)
             {
-                timer4.Stop();
-                label2.Text = "";
-                timeLeftflashTop = 300;
+                tmrTopFlash.Stop();
+                lblTopFlash.Text = "";
+                timeLeftFlashTop = 300;
                 return;
             }
-            label2.Text = "Top F " + timeLeftflashTop.ToString();
+            lblTopFlash.Text = "Top F " + timeLeftFlashTop.ToString();
         }
 
         private void timer5_Tick(object sender, EventArgs e)
         {
-            timeLeftteleportTop--;
-            if (timeLeftteleportTop == 0)
+            timeLeftTeleportTop--;
+            if (timeLeftTeleportTop == 0)
             {
-                timer5.Stop();
-                label1.Text = "";
-                timeLeftteleportTop = 300;
+                tmrTopTP.Stop();
+                lblTopSecondary.Text = "";
+                timeLeftTeleportTop = 300;
                 return;
             }
-            label1.Text = "Top TP " + timeLeftteleportTop.ToString();
+            lblTopSecondary.Text = "Top TP " + timeLeftTeleportTop.ToString();
         }
 
         private void timer6_Tick(object sender, EventArgs e)
         {
-            timeLeftexhaustTop--;
-            if (timeLeftexhaustTop == 0)
+            timeLeftExhaustTop--;
+            if (timeLeftExhaustTop == 0)
             {
-                timer6.Stop();
-                label1.Text = "";
-                timeLeftexhaustTop = 210;
+                tmrTopEx.Stop();
+                lblTopSecondary.Text = "";
+                timeLeftExhaustTop = 210;
                 return;
             }
-            label1.Text = "Top Ex " + timeLeftexhaustTop.ToString();
+            lblTopSecondary.Text = "Top Ex " + timeLeftExhaustTop.ToString();
         }
 
         private void timer7_Tick(object sender, EventArgs e)
         {
-            timeLeftigniteTop--;
-            if (timeLeftigniteTop == 0)
+            timeLeftIgniteTop--;
+            if (timeLeftIgniteTop == 0)
             {
-                timer7.Stop();
-                label1.Text = "";
-                timeLeftigniteTop = 210;
+                tmrTopIg.Stop();
+                lblTopSecondary.Text = "";
+                timeLeftIgniteTop = 210;
                 return;
             }
-            label1.Text = "Top Ig " + timeLeftigniteTop.ToString();
+            lblTopSecondary.Text = "Top Ig " + timeLeftIgniteTop.ToString();
         }
 
         private void timer8_Tick(object sender, EventArgs e)
         {
-            timeLeftghostTop--;
-            if (timeLeftghostTop == 0)
+            timeLeftGhostTop--;
+            if (timeLeftGhostTop == 0)
             {
-                timer8.Stop();
-                label1.Text = "";
-                timeLeftghostTop = 180;
+                tmrTopGhost.Stop();
+                lblTopSecondary.Text = "";
+                timeLeftGhostTop = 180;
                 return;
             }
-            label1.Text = "Top G " + timeLeftghostTop.ToString();
+            lblTopSecondary.Text = "Top G " + timeLeftGhostTop.ToString();
         }
 
         private void timer9_Tick(object sender, EventArgs e)
         {
-            timeLeftflashJungle--;
-            if (timeLeftflashJungle == 0)
+            timeLeftFlashJungle--;
+            if (timeLeftFlashJungle == 0)
             {
-                timer9.Stop();
-                label4.Text = "";
-                timeLeftflashJungle = 300;
+                tmrJgFlash.Stop();
+                lblJgFlash.Text = "";
+                timeLeftFlashJungle = 300;
                 return;
             }
-            label4.Text = "Jg F " + timeLeftflashJungle.ToString();
+            lblJgFlash.Text = "Jg F " + timeLeftFlashJungle.ToString();
         }
 
         private void timer10_Tick(object sender, EventArgs e)
         {
-            timeLeftigniteJungle--;
-            if (timeLeftigniteJungle == 0)
+            timeLeftIgniteJungle--;
+            if (timeLeftIgniteJungle == 0)
             {
-                timer10.Stop();
-                label3.Text = "";
-                timeLeftigniteJungle = 210;
+                tmrJgIg.Stop();
+                lblJgSecondary.Text = "";
+                timeLeftIgniteJungle = 210;
                 return;
             }
-            label3.Text = "Jg Ig " + timeLeftigniteJungle.ToString();
+            lblJgSecondary.Text = "Jg Ig " + timeLeftIgniteJungle.ToString();
         }
 
         private void timer11_Tick(object sender, EventArgs e)
         {
-            timeLeftghostJungle--;
-            if (timeLeftghostJungle == 0)
+            timeLeftGhostJungle--;
+            if (timeLeftGhostJungle == 0)
             {
-                timer9.Stop();
-                label3.Text = "";
-                timeLeftghostJungle = 180;
+                tmrJgFlash.Stop();
+                lblJgSecondary.Text = "";
+                timeLeftGhostJungle = 180;
                 return;
             }
-            label3.Text = "Jg G " + timeLeftghostJungle.ToString();
+            lblJgSecondary.Text = "Jg G " + timeLeftGhostJungle.ToString();
         }
 
         private void timer12_Tick(object sender, EventArgs e)
         {
-            timeLeftflashMid--;
-            if (timeLeftflashMid == 0)
+            timeLeftFlashMid--;
+            if (timeLeftFlashMid == 0)
             {
-                timer12.Stop();
-                label6.Text = "";
-                timeLeftflashMid = 300;
+                tmrMidFlash.Stop();
+                lblMidFlash.Text = "";
+                timeLeftFlashMid = 300;
                 return;
             }
-            label6.Text = "Mid F " + timeLeftflashMid.ToString();
+            lblMidFlash.Text = "Mid F " + timeLeftFlashMid.ToString();
         }
 
         private void timer13_Tick(object sender, EventArgs e)
         {
-            timeLeftbarrierMid--;
-            if (timeLeftbarrierMid == 0)
+            timeLeftBarrierMid--;
+            if (timeLeftBarrierMid == 0)
             {
-                timer13.Stop();
-                label5.Text = "";
-                timeLeftbarrierMid = 180;
+                tmrMidBarrier.Stop();
+                lblMidSecondary.Text = "";
+                timeLeftBarrierMid = 180;
                 return;
             }
-            label5.Text = "Mid B " + timeLeftbarrierMid.ToString();
+            lblMidSecondary.Text = "Mid B " + timeLeftBarrierMid.ToString();
         }
 
         private void timer14_Tick(object sender, EventArgs e)
         {
-            timeLeftexhaustMid--;
-            if (timeLeftexhaustMid == 0)
+            timeLeftExhaustMid--;
+            if (timeLeftExhaustMid == 0)
             {
-                timer14.Stop();
-                label5.Text = "";
-                timeLeftexhaustMid = 210;
+                tmrMidEx.Stop();
+                lblMidSecondary.Text = "";
+                timeLeftExhaustMid = 210;
                 return;
             }
-            label5.Text = "Mid Ex " + timeLeftexhaustMid.ToString();
+            lblMidSecondary.Text = "Mid Ex " + timeLeftExhaustMid.ToString();
         }
 
         private void timer15_Tick(object sender, EventArgs e)
         {
-            timeLeftigniteMid--;
-            if (timeLeftigniteMid == 0)
+            timeLeftIgniteMid--;
+            if (timeLeftIgniteMid == 0)
             {
-                timer15.Stop();
-                label5.Text = "";
-                timeLeftigniteMid = 210;
+                tmrMidIg.Stop();
+                lblMidSecondary.Text = "";
+                timeLeftIgniteMid = 210;
                 return;
             }
-            label5.Text = "Mid Ig " + timeLeftigniteMid.ToString();
+            lblMidSecondary.Text = "Mid Ig " + timeLeftIgniteMid.ToString();
         }
 
         private void timer16_Tick(object sender, EventArgs e)
         {
-            timeLeftghostMid--;
-            if (timeLeftghostMid == 0)
+            timeLeftGhostMid--;
+            if (timeLeftGhostMid == 0)
             {
-                timer16.Stop();
-                label5.Text = "";
-                timeLeftghostMid = 180;
+                tmrMidGhost.Stop();
+                lblMidSecondary.Text = "";
+                timeLeftGhostMid = 180;
                 return;
             }
-            label5.Text = "Mid G " + timeLeftghostMid.ToString();
+            lblMidSecondary.Text = "Mid G " + timeLeftGhostMid.ToString();
         }
 
         private void timer17_Tick(object sender, EventArgs e)
         {
-            timeLeftcleanseMid--;
-            if (timeLeftcleanseMid == 0)
+            timeLeftCleanseMid--;
+            if (timeLeftCleanseMid == 0)
             {
-                timer17.Stop();
-                label5.Text = "";
-                timeLeftcleanseMid = 210;
+                tmrMidCleanse.Stop();
+                lblMidSecondary.Text = "";
+                timeLeftCleanseMid = 210;
                 return;
             }
-            label5.Text = "Mid C " + timeLeftcleanseMid.ToString();
+            lblMidSecondary.Text = "Mid C " + timeLeftCleanseMid.ToString();
         }
 
         private void timer18_Tick(object sender, EventArgs e)
         {
-            timeLefthealMid--;
-            if (timeLefthealMid == 0)
+            timeLeftHealMid--;
+            if (timeLeftHealMid == 0)
             {
-                timer18.Stop();
-                label5.Text = "";
-                timeLefthealMid = 240;
+                tmrMidHeal.Stop();
+                lblMidSecondary.Text = "";
+                timeLeftHealMid = 240;
                 return;
             }
-            label5.Text = "Mid H " + timeLefthealMid.ToString();
+            lblMidSecondary.Text = "Mid H " + timeLeftHealMid.ToString();
         }
 
         private void timer19_Tick(object sender, EventArgs e)
         {
-            timeLeftteleportMid--;
-            if (timeLeftteleportMid == 0)
+            timeLeftTeleportMid--;
+            if (timeLeftTeleportMid == 0)
             {
-                timer19.Stop();
-                label5.Text = "";
-                timeLeftteleportMid = 300;
+                tmrMidTP.Stop();
+                lblMidSecondary.Text = "";
+                timeLeftTeleportMid = 300;
                 return;
             }
-            label5.Text = "Mid TP " + timeLeftteleportMid.ToString();
+            lblMidSecondary.Text = "Mid TP " + timeLeftTeleportMid.ToString();
         }
 
         private void timer20_Tick(object sender, EventArgs e)
         {
-            timeLeftflashSupp--;
-            if (timeLeftflashSupp == 0)
+            timeLeftFlashSupp--;
+            if (timeLeftFlashSupp == 0)
             {
-                timer20.Stop();
-                label10.Text = "";
-                timeLeftflashSupp = 300;
+                tmrSuppFlash.Stop();
+                lblSuppFlash.Text = "";
+                timeLeftFlashSupp = 300;
                 return;
             }
-            label10.Text = "Supp F " + timeLeftflashSupp.ToString();
+            lblSuppFlash.Text = "Supp F " + timeLeftFlashSupp.ToString();
         }
 
         private void timer21_Tick(object sender, EventArgs e)
         {
-            timeLeftigniteSupp--;
-            if (timeLeftigniteSupp == 0)
+            timeLeftIgniteSupp--;
+            if (timeLeftIgniteSupp == 0)
             {
-                timer21.Stop();
-                label9.Text = "";
-                timeLeftigniteSupp = 210;
+                tmrSuppIg.Stop();
+                lblSuppSecondary.Text = "";
+                timeLeftIgniteSupp = 210;
                 return;
             }
-            label9.Text = "Supp Ig " + timeLeftigniteSupp.ToString();
+            lblSuppSecondary.Text = "Supp Ig " + timeLeftIgniteSupp.ToString();
         }
 
         private void timer22_Tick(object sender, EventArgs e)
         {
-            timeLeftexhaustSupp--;
-            if (timeLeftexhaustSupp == 0)
+            timeLeftExhaustSupp--;
+            if (timeLeftExhaustSupp == 0)
             {
-                timer22.Stop();
-                label9.Text = "";
-                timeLeftexhaustSupp = 210;
+                tmrSuppEx.Stop();
+                lblSuppSecondary.Text = "";
+                timeLeftExhaustSupp = 210;
                 return;
             }
-            label9.Text = "Supp Ex " + timeLeftexhaustSupp.ToString();
+            lblSuppSecondary.Text = "Supp Ex " + timeLeftExhaustSupp.ToString();
         }
 
         private void timer23_Tick(object sender, EventArgs e)
         {
-            timeLefthealSupp--;
-            if (timeLefthealSupp == 0)
+            timeLeftHealSupp--;
+            if (timeLeftHealSupp == 0)
             {
-                timer23.Stop();
-                label9.Text = "";
-                timeLefthealSupp = 240;
+                tmrSuppHeal.Stop();
+                lblSuppSecondary.Text = "";
+                timeLeftHealSupp = 240;
                 return;
             }
-            label9.Text = "Supp H " + timeLefthealSupp.ToString();
+            lblSuppSecondary.Text = "Supp H " + timeLeftHealSupp.ToString();
         }
 
         private void timer24_Tick(object sender, EventArgs e)
         {
-            timeLeftexhaustJungle--;
-            if (timeLeftexhaustJungle == 0)
+            timeLeftExhaustJungle--;
+            if (timeLeftExhaustJungle == 0)
             {
-                timer24.Stop();
-                label3.Text = "";
-                timeLeftexhaustJungle = 210;
+                tmrJgEx.Stop();
+                lblJgSecondary.Text = "";
+                timeLeftExhaustJungle = 210;
                 return;
             }
-            label3.Text = "Jg Ex " + timeLeftexhaustJungle.ToString();
+            lblJgSecondary.Text = "Jg Ex " + timeLeftExhaustJungle.ToString();
+        }
+
+        private void tmrAdcCleanse_Tick(object sender, EventArgs e)
+        {
+            timeLeftCleanseADC--;
+            if (timeLeftCleanseADC == 0)
+            {
+                tmrAdcCleanse.Stop();
+                lblAdcSecondary.Text = "";
+                timeLeftCleanseADC = 210;
+                return;
+            }
+            lblAdcSecondary.Text = "ADC C " + timeLeftCleanseADC.ToString();
+        }
+
+        private void tmrAdcTp_Tick(object sender, EventArgs e)
+        {
+            timeLeftTeleportADC--;
+            if (timeLeftTeleportADC == 0)
+            {
+                tmrAdcTp.Stop();
+                lblAdcSecondary.Text = "";
+                timeLeftTeleportADC = 300;
+                return;
+            }
+            lblAdcSecondary.Text = "ADC TP " + timeLeftTeleportADC.ToString();
+        }
+
+        private void tmrAdcExhaust_Tick(object sender, EventArgs e)
+        {
+            timeLeftExhaustADC--;
+            if (timeLeftExhaustADC == 0)
+            {
+                tmrAdcExhaust.Stop();
+                lblAdcSecondary.Text = "";
+                timeLeftTeleportADC = 210;
+                return;
+            }
+            lblAdcSecondary.Text = "ADC Ex " + timeLeftExhaustADC.ToString();
         }
     }
 }
